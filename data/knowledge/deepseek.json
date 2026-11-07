@@ -1,0 +1,1579 @@
+{
+  "match": [
+    "大肥鱼",
+    "DeepSeek"
+  ],
+  "source": "jingyu-live2d-agent v1.5.0 (model_profile.py)",
+  "model": "DeepSeek-chan · 大肥鱼",
+  "credit": "神宫凉子（原画及拆分） / 霓虹猫_NeonNeko（Live2D 建模）",
+  "idleMotion": "IDLE",
+  "primary": [
+    "AngleX",
+    "AngleY",
+    "AngleZ",
+    "PositionX",
+    "PositionY",
+    "PositionZ",
+    "LeanInput",
+    "ParamEyeBallX",
+    "ParamEyeBallY",
+    "ParamEyeLOpen",
+    "ParamEyeROpen",
+    "ParamMouthForm",
+    "ParamMouthOpenY",
+    "EyeSmile",
+    "MouthSmile_L",
+    "MouthSmile_R",
+    "ParamBrowLY",
+    "ParamBrowRY",
+    "BrowInnerUp",
+    "CheeckPuff",
+    "JawOpen",
+    "ParamBreath",
+    "Mouthpucker",
+    "MouthFunnel",
+    "MouthX",
+    "MouthPressLipOpen",
+    "MouthPuckerWiden",
+    "REyeSquint",
+    "LEyeSquint",
+    "TongueOut",
+    "NoseNeer",
+    "MouthRollUpper",
+    "MouthRollLower"
+  ],
+  "gestures": {
+    "hand_on_chest": {
+      "label": "抚胸致意",
+      "switch": "Movement2",
+      "enter": "默认手切举手",
+      "exit": "举手切默认手"
+    },
+    "point": {
+      "label": "竖起食指",
+      "switch": "Movement3",
+      "enter": "竖手指切出来动画",
+      "exit": "竖手指切回默认"
+    },
+    "grass": {
+      "label": "拿起狗尾草",
+      "switch": "Movement1",
+      "enter": "狗尾草切换出来",
+      "exit": "狗尾草切回默认手"
+    }
+  },
+  "gestureJoints": {
+    "hand_on_chest": {
+      "upperArm": "Param62",
+      "perspective": "Param59",
+      "forearm": "Param60",
+      "wrist": "Param61"
+    },
+    "point": {
+      "upperArm": "Param36",
+      "perspective": "Param39",
+      "forearm": "Param41",
+      "wrist": "Param42",
+      "finger": "Param43"
+    },
+    "grass": {
+      "upperArm": "Param36",
+      "perspective": "Param39",
+      "forearm": "Param41",
+      "wrist": "Param42"
+    }
+  },
+  "experimentalInputs": {
+    "ids": [
+      "NoseNeer",
+      "MouthRollUpper",
+      "MouthRollLower"
+    ],
+    "note": "作者配置存在，但 neutral/talk/turned 三种 Core 几何探测未发现可见变化；不保证有表演效果"
+  },
+  "unsupported": [
+    "没有自由行走、跑步、转身等完整骨骼动画；不可声称已执行这些动作"
+  ],
+  "inventory": "../core-inventory.json",
+  "performanceRules": {
+    "schemaVersion": 1,
+    "derived": {
+      "schemaVersion": 1,
+      "model": "DeepSeek",
+      "pools": {
+        "parameters": 509,
+        "physicsOutput": 292,
+        "handSwitch": 2,
+        "mouthLipsync": 1,
+        "protectedAngle": 0,
+        "protectedAppearance": 0,
+        "eligibleSwitch": 89,
+        "eligibleContinuous": 125
+      },
+      "soullinkDetectedHandSwitches": [
+        "Param38",
+        "Param40"
+      ],
+      "physicsOutputIds": [
+        "AngleXbs",
+        "AngleYbs",
+        "CheeckPuff2",
+        "CheeckPuffL",
+        "CheeckPuffR",
+        "CheeksWiggleX",
+        "CheeksWiggleXL",
+        "CheeksWiggleXR",
+        "CheeksWiggleY",
+        "ChestX1",
+        "ChestX2",
+        "ChestX3",
+        "ChestXBS",
+        "ChestY1",
+        "ChestY2",
+        "ChestY3",
+        "ChestY4",
+        "Emotion",
+        "Emotion2",
+        "FrontHairX1",
+        "FrontHairX2",
+        "FrontHairX3",
+        "FrontHairX4",
+        "FrontHairY1",
+        "FrontHairY2",
+        "FrontHairY3",
+        "FrontHairY4",
+        "GemHighlightx",
+        "GemHighlighty",
+        "GemReflection",
+        "Hat2phB",
+        "Hat2phC",
+        "Hat2phD",
+        "Hat2pha",
+        "Hat_XA",
+        "Hat_XB",
+        "Hat_XC",
+        "Hat_YA",
+        "Hat_YB",
+        "Hat_YC",
+        "HipAngleX",
+        "HipAngleX2",
+        "HipAngleY",
+        "HipAngleYDOWN",
+        "HipAngleYUP",
+        "HipAngleZ",
+        "HipZ1",
+        "HipZ2",
+        "KiraA",
+        "KiraB",
+        "KiraC",
+        "KiraD",
+        "LArm",
+        "LBowX1",
+        "LBowX3",
+        "LBowX4",
+        "LControl",
+        "LEGAngleZ2",
+        "LEar1",
+        "LEar2",
+        "LEar3",
+        "LEyeLashX1",
+        "LEyeLashX2",
+        "LEyeball1",
+        "LEyeball2",
+        "LEyeball3",
+        "LEyes1",
+        "LEyes2",
+        "LFlip",
+        "LFlip2",
+        "LForearm",
+        "LHand",
+        "LHand2",
+        "LHighLight1",
+        "LHighLight2",
+        "LHighLight3",
+        "LJewelry1",
+        "LJewelry2",
+        "LJewelry3",
+        "LParamGlowA",
+        "LParamGlowB",
+        "LRibbonX1",
+        "LRibbonX2",
+        "LRibbonX3",
+        "LRibbonX4",
+        "LSleeveX1",
+        "LSleeveX2",
+        "LSleeveX3",
+        "LSleeveY",
+        "LSleeveY2",
+        "LSleeveY3",
+        "LWrist",
+        "LaceLX1",
+        "LaceLX2",
+        "LaceLX3",
+        "LaceRX",
+        "LaceRX2",
+        "LaceRX3",
+        "LaceX1",
+        "LaceX2",
+        "LaceX3",
+        "LaceY1",
+        "LaceY2",
+        "LaceY3",
+        "LateHairX1",
+        "LateHairX2",
+        "LateHairX3",
+        "LateHairX4",
+        "LateHairX5",
+        "LateHairY1",
+        "LateHairY2",
+        "LateHairY3",
+        "LateHairY4",
+        "LateHairY5",
+        "LateHairZ",
+        "LateSideHairX1",
+        "LateSideHairX2",
+        "LateSideHairX3",
+        "LateSideHairX4",
+        "LateSideHairX5",
+        "LateSideHairY1",
+        "LateSideHairY2",
+        "LateSideHairY3",
+        "LateSideHairY4",
+        "LateSideHairY5",
+        "LipPhysics1",
+        "LipPhysics2",
+        "LipPhysics3",
+        "LowX2",
+        "Param25",
+        "Param33",
+        "Param34",
+        "Param35",
+        "Param44",
+        "Param45",
+        "Param46",
+        "Param47",
+        "Param48",
+        "Param49",
+        "Param50",
+        "Param52",
+        "Param53",
+        "Param54",
+        "ParamAngleX",
+        "ParamAngleY",
+        "ParamAngleZ",
+        "ParamBodyAngleRX",
+        "ParamBodyAngleX",
+        "ParamBodyAngleX2",
+        "ParamBodyAngleY",
+        "ParamBodyAngleY2",
+        "ParamBodyAngleZ",
+        "ParamBrowLAngle",
+        "ParamBrowLAngleSmoothing",
+        "ParamBrowLY2",
+        "ParamBrowLY3",
+        "ParamBrowRAngle",
+        "ParamBrowRAngleSmoothing",
+        "ParamBrowRY2",
+        "ParamBrowRY3",
+        "ParamHipAngleZ",
+        "ParamHipAngleZ2",
+        "ParamTongueUpDown",
+        "ParamTongueWidth",
+        "Param_Angle_Rotation84",
+        "Param_Angle_Rotation85",
+        "Param_Angle_Rotation86",
+        "Param_Angle_Rotation87",
+        "Param_Angle_Rotation88",
+        "Param_Angle_Rotation89",
+        "PoutOffsetXL",
+        "PoutOffsetXR",
+        "Press",
+        "PupilX",
+        "PupilY",
+        "RArm",
+        "RBowX1",
+        "RBowX2",
+        "RBowX3",
+        "RBowX4",
+        "RBowX5",
+        "RBowX6",
+        "RBowX7",
+        "RBowX8",
+        "RControl",
+        "REar1",
+        "REar2",
+        "REar3",
+        "REyeLashX1",
+        "REyeLashX2",
+        "REyeball1",
+        "REyeball2",
+        "REyeball3",
+        "REyes1",
+        "REyes2",
+        "RFlip",
+        "RFlip2",
+        "RForearm",
+        "RHand",
+        "RHand2",
+        "RHighLight1",
+        "RHighLight2",
+        "RHighLight3",
+        "RJewelry1",
+        "RJewelry2",
+        "RJewelry3",
+        "RParamGlowA",
+        "RParamGlowB",
+        "RParamGlowC",
+        "RRibbonX1",
+        "RRibbonX2",
+        "RRibbonX3",
+        "RRibbonX4",
+        "RSleeveX1",
+        "RSleeveX2",
+        "RSleeveX3",
+        "RSleeveY1",
+        "RSleeveY2",
+        "RSleeveY3",
+        "RWrist",
+        "Shine",
+        "ShineBIG",
+        "ShineX",
+        "ShockL",
+        "ShockR",
+        "ShortPonytailX1",
+        "ShortPonytailX2",
+        "ShortPonytailXBS",
+        "ShortPonytailXBS2",
+        "ShortPonytailY",
+        "ShortPonytailY2",
+        "ShortPonytailYBS",
+        "ShortPonytailYBS2",
+        "ShoulderY",
+        "ShoulderZ",
+        "SideHairLBS",
+        "SideHairLX1",
+        "SideHairLX2",
+        "SideHairLX3",
+        "SideHairRBS",
+        "SideHairRX1",
+        "SideHairRX2",
+        "SideHairRX3",
+        "SideHairX1",
+        "SideHairX2",
+        "SideHairX3",
+        "SideHairX4",
+        "SideHairY1",
+        "SideHairY2",
+        "SideHairY3",
+        "SideHairY4",
+        "SkirtLayerX1",
+        "SkirtLayerX2",
+        "SkirtLayerX3",
+        "SkirtLayerX4",
+        "SkirtLayerX5",
+        "SkirtLayerX6",
+        "SkirtLayerY1",
+        "SkirtLayerY2",
+        "SkirtLayerY3",
+        "SkirtLayerY4",
+        "SkirtLayerY5",
+        "SkirtSpecial",
+        "SkirtSpecial2",
+        "SkirtX1",
+        "SkirtX2",
+        "SkirtX3",
+        "SkirtX4",
+        "SkirtY",
+        "SkirtY2",
+        "SkirtY3",
+        "SkirtY4",
+        "SkirtY5",
+        "SkirtY6",
+        "SkirtY7",
+        "SkirtY8",
+        "SkirtY9",
+        "SkirtYBS",
+        "ribbonX1",
+        "ribbonX2",
+        "ribbonX3",
+        "ribbonX4",
+        "ribbonX5",
+        "ribbonX6",
+        "ribbonX7",
+        "ribbonY1",
+        "ribbonY2",
+        "ribbonY3",
+        "ribbonY4",
+        "ribbonY5",
+        "ribbonY6",
+        "ribbonY7"
+      ],
+      "forcedContinuous": [
+        {
+          "id": "BrowInnerUp",
+          "name": "BrowInnerUp"
+        },
+        {
+          "id": "REyeSquint",
+          "name": "R-Eye Squint"
+        },
+        {
+          "id": "LEyeSquint",
+          "name": "L-Eye Squint"
+        },
+        {
+          "id": "JawOpen",
+          "name": "下巴开闭"
+        },
+        {
+          "id": "TongueOut",
+          "name": "伸舌头"
+        },
+        {
+          "id": "MouthSmile_L",
+          "name": "MouthSmile_L"
+        },
+        {
+          "id": "MouthSmile_R",
+          "name": "MouthSmile_R"
+        },
+        {
+          "id": "Mouthpucker",
+          "name": "撅嘴"
+        },
+        {
+          "id": "MouthFunnel",
+          "name": "漏斗嘴"
+        },
+        {
+          "id": "CheeckPuff",
+          "name": "鼓脸"
+        },
+        {
+          "id": "MouthRollUpper",
+          "name": "MouthRollUpper"
+        },
+        {
+          "id": "MouthRollLower",
+          "name": "MouthRollLower"
+        },
+        {
+          "id": "NoseNeer",
+          "name": "NosePositionY"
+        }
+      ],
+      "poolIds": {
+        "eligibleSwitch": [
+          "key1",
+          "key2",
+          "key3",
+          "key4",
+          "key5",
+          "key6",
+          "key7",
+          "key8",
+          "key9",
+          "key10",
+          "key11",
+          "key12",
+          "key13",
+          "Divider1",
+          "Movement1",
+          "Movement2",
+          "Movement3",
+          "Divider3",
+          "Clothes1",
+          "Clothes2",
+          "Clothes3",
+          "Clothes4",
+          "Clothes5",
+          "Param",
+          "IDLE",
+          "ParamSilence",
+          "ParamA",
+          "ParamI",
+          "ParamU",
+          "ParamE",
+          "ParamO",
+          "RShiftbuffer",
+          "RColorshift",
+          "MicroGlows",
+          "SweatBurst1",
+          "SweatBurst2",
+          "SweatBurst3",
+          "SweatBurst4",
+          "SweatBurst5",
+          "SweatBurst6",
+          "Sweat1",
+          "Sweat2",
+          "Param140",
+          "Param137",
+          "Param139",
+          "Angry",
+          "Param136",
+          "Angry2",
+          "Angry3",
+          "SWITCHA",
+          "Param141",
+          "Param142",
+          "F1Anikey",
+          "F2Anikey",
+          "F3Anikey",
+          "Colorflicker5",
+          "Glintshift5",
+          "Colorflicker6",
+          "Glintshift6",
+          "Colorflicker7",
+          "Glintshift8",
+          "Colorflicker8",
+          "Glintshift7",
+          "LittleFlower1",
+          "LittleFlower2",
+          "LittleFlower3",
+          "LittleFlower4",
+          "LittleFlower5",
+          "LittleFlower6",
+          "LittleFlower11",
+          "Param12",
+          "Param13",
+          "AngryMove",
+          "AngryMove3",
+          "AngryMove5",
+          "AngryMove8",
+          "Param28",
+          "RCry",
+          "RCryKey",
+          "RCry2",
+          "Param30",
+          "LCry",
+          "LCryKey",
+          "LCry3",
+          "Param55",
+          "Param56",
+          "Param58",
+          "Param57",
+          "Param37"
+        ],
+        "eligibleContinuous": [
+          "Paramshuiyin7",
+          "Paramshuiyin8",
+          "Param2",
+          "AngleXbs3",
+          "AngleXbs2",
+          "AngleYbs2",
+          "ShoulderX",
+          "ShoulderYy",
+          "Divider19",
+          "HipAngleXq",
+          "ParamBodyAngleRY",
+          "ParamBodyAngleRZ",
+          "AngleX",
+          "AngleY",
+          "AngleZ",
+          "PositionX",
+          "PositionY",
+          "PositionZ",
+          "LeanInput",
+          "EyeSmile",
+          "ParamEyeBallX",
+          "ParamEyeBallY",
+          "BrowInnerUp",
+          "Divider4",
+          "ParamEyeROpen",
+          "ParamBrowRY",
+          "REyeSquint",
+          "Divider5",
+          "LParamGlowC",
+          "ParamEyeLOpen",
+          "ParamBrowLY",
+          "LEyeSquint",
+          "Divider8",
+          "ParamMouthForm",
+          "JawOpen",
+          "TongueOut",
+          "Divider31",
+          "MouthX",
+          "MouthSmile_L",
+          "MouthSmile_R",
+          "Mouthpucker",
+          "MouthFunnel",
+          "MouthPuckerWiden",
+          "CheeckPuff",
+          "MouthPressLipOpen",
+          "MouthRollUpper",
+          "MouthRollLower",
+          "NoseNeer",
+          "Divider6",
+          "Divider7",
+          "Divider15",
+          "Divider11",
+          "FrontHairZ",
+          "LateSideHairXBS",
+          "LateSideHairYbs",
+          "Divider9",
+          "LRibbonY1",
+          "LRibbonY2",
+          "LRibbonY3",
+          "LRibbonY4",
+          "Divider10",
+          "RSleeveX4",
+          "RRibbonY1",
+          "RRibbonY2",
+          "RRibbonY3",
+          "RRibbonY4",
+          "Divider18",
+          "Divider12",
+          "Divider23",
+          "Divider20",
+          "SkirtLayerY6",
+          "Divider14",
+          "Divider13",
+          "Divider33",
+          "Param11",
+          "WingOpenClose",
+          "WingSpread",
+          "FeatherPhysics1",
+          "FeatherPhysics2",
+          "WingRotation",
+          "WingOpenClose2",
+          "WingSpread2",
+          "FeatherPhysics3",
+          "FeatherPhysics4",
+          "WingRotation2",
+          "Param138",
+          "SHOCKEYE",
+          "Param135",
+          "Param6",
+          "Param7",
+          "Param132",
+          "Param133",
+          "AniEyerolling",
+          "Ani1",
+          "Ani2",
+          "Divider24",
+          "Divider25",
+          "LittleFlower9",
+          "LittleFlower10",
+          "LittleFlower13",
+          "LittleFlower12",
+          "Divider28",
+          "AngryMove2",
+          "AngryMove4",
+          "AngryMove6",
+          "AngryMove7",
+          "Divider16",
+          "Divider22",
+          "Param31",
+          "Param32",
+          "Param27",
+          "Param29",
+          "Startwinkle",
+          "Startwinkle2",
+          "Param51",
+          "Param36",
+          "Param39",
+          "Param41",
+          "Param42",
+          "Param43",
+          "Param62",
+          "Param59",
+          "Param60",
+          "Param61",
+          "ParamBreath"
+        ]
+      },
+      "gestureJoints": [
+        {
+          "id": "Param62",
+          "name": "L 大臂z",
+          "min": -1,
+          "max": 1,
+          "default": 0,
+          "pool": "eligible-continuous"
+        },
+        {
+          "id": "Param59",
+          "name": "大臂透视",
+          "min": -1,
+          "max": 1,
+          "default": 0,
+          "pool": "eligible-continuous"
+        },
+        {
+          "id": "Param60",
+          "name": "L小臂 Z",
+          "min": -1,
+          "max": 1,
+          "default": 0,
+          "pool": "eligible-continuous"
+        },
+        {
+          "id": "Param61",
+          "name": "L手腕 Z",
+          "min": -1,
+          "max": 1,
+          "default": 0,
+          "pool": "eligible-continuous"
+        },
+        {
+          "id": "Param36",
+          "name": "R大臂z",
+          "min": -1,
+          "max": 1,
+          "default": 0,
+          "pool": "eligible-continuous"
+        },
+        {
+          "id": "Param39",
+          "name": "大臂透视",
+          "min": -1,
+          "max": 1,
+          "default": 0,
+          "pool": "eligible-continuous"
+        },
+        {
+          "id": "Param41",
+          "name": "R小臂 Z",
+          "min": -1,
+          "max": 1,
+          "default": 0,
+          "pool": "eligible-continuous"
+        },
+        {
+          "id": "Param42",
+          "name": "R手腕 Z",
+          "min": -1,
+          "max": 1,
+          "default": 0,
+          "pool": "eligible-continuous"
+        },
+        {
+          "id": "Param43",
+          "name": "R 食指",
+          "min": -1,
+          "max": 1,
+          "default": 0,
+          "pool": "eligible-continuous"
+        }
+      ],
+      "gestureSwitches": {
+        "hand_on_chest": "Movement2",
+        "point": "Movement3",
+        "grass": "Movement1"
+      },
+      "experimentalInputs": [
+        {
+          "id": "NoseNeer",
+          "name": "NosePositionY"
+        },
+        {
+          "id": "MouthRollUpper",
+          "name": "MouthRollUpper"
+        },
+        {
+          "id": "MouthRollLower",
+          "name": "MouthRollLower"
+        }
+      ],
+      "animationTriggers": [
+        {
+          "id": "AniEyerolling",
+          "name": "蚊香眼",
+          "min": 0,
+          "max": 30,
+          "default": 0,
+          "reason": "动画触发器量程不是 0..1，会被当成连续通道给出分数值；只允许端点"
+        },
+        {
+          "id": "Ani1",
+          "name": "动画1",
+          "min": -1,
+          "max": 1,
+          "default": -1,
+          "reason": "动画触发器量程不是 0..1，会被当成连续通道给出分数值；只允许端点"
+        },
+        {
+          "id": "Ani2",
+          "name": "动画2",
+          "min": -1,
+          "max": 1,
+          "default": 0,
+          "reason": "动画触发器量程不是 0..1，会被当成连续通道给出分数值；只允许端点"
+        }
+      ],
+      "hazards": [
+        {
+          "id": "Divider1",
+          "name": "■■■■■■■■■■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider3",
+          "name": "■■■■■■■■■■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider19",
+          "name": "■■■■■身体物理■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "IDLE",
+          "name": "IDLE",
+          "reason": "待机动画触发开关，接管会与待机系统抢控制权"
+        },
+        {
+          "id": "Divider4",
+          "name": "■■■■■■■■右眼■■■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider5",
+          "name": "■■■■■■■■左眼■■■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider8",
+          "name": "■■■■■■■■嘴■■■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider31",
+          "name": "■■■■■■■■VB■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider6",
+          "name": "<<<<<<物理■■■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider7",
+          "name": "■■■■■■物理>>>>>>",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider15",
+          "name": "■■■ 口物理 ■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider11",
+          "name": "■■■■■■■■头发物理■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider9",
+          "name": "■■■■■■■■左手臂■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider10",
+          "name": "■■■■■■■■右手臂■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider18",
+          "name": "■■■■■■■■胸■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider12",
+          "name": "■■■■■■■■头配饰■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider23",
+          "name": "■■■■■■■■■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider20",
+          "name": "■■■■■■■■裙子■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider14",
+          "name": "■■■■■■■■上衣■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider13",
+          "name": "■■■■■■■■兽耳■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider33",
+          "name": "■■■■■■■■动画■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider24",
+          "name": "■■■■■■逸散的光点■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider25",
+          "name": "■■■■■■飘花特效■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider28",
+          "name": "■■■■■■生气■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider16",
+          "name": "■■■■■■■■眼睛动画■■■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "Divider22",
+          "name": "■■■■■■■■动画■■■■",
+          "reason": "编辑器分组分隔线，不是视觉参数"
+        },
+        {
+          "id": "NoseNeer",
+          "name": "NosePositionY",
+          "reason": "作者配置存在但实测无可见变化，接管是白费注意力"
+        },
+        {
+          "id": "MouthRollUpper",
+          "name": "MouthRollUpper",
+          "reason": "作者配置存在但实测无可见变化，接管是白费注意力"
+        },
+        {
+          "id": "MouthRollLower",
+          "name": "MouthRollLower",
+          "reason": "作者配置存在但实测无可见变化，接管是白费注意力"
+        }
+      ],
+      "families": [
+        {
+          "id": "face-effect",
+          "label": "表情/脸部特效开关",
+          "mode": "single",
+          "members": [
+            "key1",
+            "key2",
+            "key3",
+            "key4",
+            "key5",
+            "key6",
+            "key7",
+            "key8",
+            "key9",
+            "key10",
+            "key11",
+            "key12",
+            "key13"
+          ]
+        },
+        {
+          "id": "gesture",
+          "label": "手部姿态开关",
+          "mode": "single",
+          "members": [
+            "Movement1",
+            "Movement2",
+            "Movement3"
+          ]
+        },
+        {
+          "id": "sweat",
+          "label": "冒汗特效开关",
+          "mode": "single",
+          "members": [
+            "SweatBurst1",
+            "SweatBurst2",
+            "SweatBurst3",
+            "SweatBurst4",
+            "SweatBurst5",
+            "SweatBurst6"
+          ]
+        },
+        {
+          "id": "face-animation",
+          "label": "脸部动画开关",
+          "mode": "single",
+          "members": [
+            "SWITCHA",
+            "F1Anikey",
+            "F2Anikey",
+            "F3Anikey"
+          ]
+        },
+        {
+          "id": "cry",
+          "label": "落泪开关（同一件事的两个通道）",
+          "mode": "single",
+          "members": [
+            "RCryKey",
+            "LCryKey"
+          ]
+        },
+        {
+          "id": "costume",
+          "label": "服装/外观切换",
+          "mode": "independent",
+          "members": [
+            "Clothes1",
+            "Clothes2",
+            "Clothes3",
+            "Clothes4",
+            "Clothes5"
+          ]
+        }
+      ],
+      "appearanceCandidates": [
+        {
+          "id": "key10",
+          "name": "10. 大钢盆",
+          "default": 0
+        },
+        {
+          "id": "key11",
+          "name": "11. 黑框眼镜",
+          "default": 0
+        },
+        {
+          "id": "key12",
+          "name": "12. 单片眼镜",
+          "default": 0
+        },
+        {
+          "id": "Clothes1",
+          "name": "1. 长短裙切换",
+          "default": 1
+        },
+        {
+          "id": "Clothes3",
+          "name": "3. 胸口衣服",
+          "default": 0
+        },
+        {
+          "id": "Clothes4",
+          "name": "4. 鞋子",
+          "default": 0
+        },
+        {
+          "id": "Clothes5",
+          "name": "5. 尾巴",
+          "default": 1
+        }
+      ],
+      "defaultOnSwitches": [
+        {
+          "id": "Clothes1",
+          "name": "1. 长短裙切换"
+        },
+        {
+          "id": "Clothes5",
+          "name": "5. 尾巴"
+        },
+        {
+          "id": "Param",
+          "name": "大小变位置"
+        },
+        {
+          "id": "ParamSilence",
+          "name": "ParamSilence"
+        },
+        {
+          "id": "LCryKey",
+          "name": ">落泪开关"
+        }
+      ],
+      "oneSided": [
+        {
+          "id": "AngleXbs3",
+          "name": "角度 Xbs +15",
+          "min": -30,
+          "max": 30,
+          "default": 30,
+          "sides": "negativeOnly"
+        },
+        {
+          "id": "AngleXbs2",
+          "name": "角度 Xbs -15",
+          "min": -30,
+          "max": 30,
+          "default": -30,
+          "sides": "positiveOnly"
+        },
+        {
+          "id": "BrowInnerUp",
+          "name": "BrowInnerUp",
+          "min": 0,
+          "max": 1,
+          "default": 0,
+          "sides": "positiveOnly"
+        },
+        {
+          "id": "REyeSquint",
+          "name": "R-Eye Squint",
+          "min": 0,
+          "max": 1,
+          "default": 0,
+          "sides": "positiveOnly"
+        },
+        {
+          "id": "LEyeSquint",
+          "name": "L-Eye Squint",
+          "min": 0,
+          "max": 1,
+          "default": 0,
+          "sides": "positiveOnly"
+        },
+        {
+          "id": "JawOpen",
+          "name": "下巴开闭",
+          "min": 0,
+          "max": 1,
+          "default": 0,
+          "sides": "positiveOnly"
+        },
+        {
+          "id": "TongueOut",
+          "name": "伸舌头",
+          "min": 0,
+          "max": 1,
+          "default": 0,
+          "sides": "positiveOnly"
+        },
+        {
+          "id": "MouthSmile_L",
+          "name": "MouthSmile_L",
+          "min": 0,
+          "max": 1,
+          "default": 0,
+          "sides": "positiveOnly"
+        },
+        {
+          "id": "MouthSmile_R",
+          "name": "MouthSmile_R",
+          "min": 0,
+          "max": 1,
+          "default": 0,
+          "sides": "positiveOnly"
+        },
+        {
+          "id": "Mouthpucker",
+          "name": "撅嘴",
+          "min": 0,
+          "max": 1,
+          "default": 0,
+          "sides": "positiveOnly"
+        },
+        {
+          "id": "MouthFunnel",
+          "name": "漏斗嘴",
+          "min": 0,
+          "max": 1,
+          "default": 0,
+          "sides": "positiveOnly"
+        },
+        {
+          "id": "CheeckPuff",
+          "name": "鼓脸",
+          "min": 0,
+          "max": 1,
+          "default": 0,
+          "sides": "positiveOnly"
+        },
+        {
+          "id": "MouthRollUpper",
+          "name": "MouthRollUpper",
+          "min": 0,
+          "max": 1,
+          "default": 0,
+          "sides": "positiveOnly"
+        },
+        {
+          "id": "MouthRollLower",
+          "name": "MouthRollLower",
+          "min": 0,
+          "max": 1,
+          "default": 0,
+          "sides": "positiveOnly"
+        },
+        {
+          "id": "NoseNeer",
+          "name": "NosePositionY",
+          "min": 0,
+          "max": 1,
+          "default": 0,
+          "sides": "positiveOnly"
+        },
+        {
+          "id": "Param11",
+          "name": "呆滞",
+          "min": 0,
+          "max": 8,
+          "default": 0,
+          "sides": "positiveOnly"
+        },
+        {
+          "id": "AniEyerolling",
+          "name": "蚊香眼",
+          "min": 0,
+          "max": 30,
+          "default": 0,
+          "sides": "positiveOnly"
+        },
+        {
+          "id": "Ani1",
+          "name": "动画1",
+          "min": -1,
+          "max": 1,
+          "default": -1,
+          "sides": "positiveOnly"
+        },
+        {
+          "id": "ParamBreath",
+          "name": "呼吸",
+          "min": 0,
+          "max": 1,
+          "default": 0,
+          "sides": "positiveOnly"
+        }
+      ],
+      "gearHealth": {
+        "continuous": 125,
+        "bothSides": 106,
+        "oneSided": 19,
+        "noGear": 0,
+        "minSmallPctOfSpan": 17.5,
+        "maxSmallPctOfSpan": 35,
+        "minSmallPctOfSpanLegacyLadder": 10,
+        "maxSmallPctOfSpanLegacyLadder": 20
+      }
+    },
+    "declared": {
+      "excluded": {
+        "editorOnly": [
+          {
+            "id": "Divider1",
+            "name": "■■■■■■■■■■■■■"
+          },
+          {
+            "id": "Divider3",
+            "name": "■■■■■■■■■■■■■"
+          },
+          {
+            "id": "Divider4",
+            "name": "■■■■■■■■右眼■■■■■■"
+          },
+          {
+            "id": "Divider5",
+            "name": "■■■■■■■■左眼■■■■■■"
+          },
+          {
+            "id": "Divider6",
+            "name": "<<<<<<物理■■■■■■"
+          },
+          {
+            "id": "Divider7",
+            "name": "■■■■■■物理>>>>>>"
+          },
+          {
+            "id": "Divider8",
+            "name": "■■■■■■■■嘴■■■■■■"
+          },
+          {
+            "id": "Divider9",
+            "name": "■■■■■■■■左手臂■■■■"
+          },
+          {
+            "id": "Divider10",
+            "name": "■■■■■■■■右手臂■■■■"
+          },
+          {
+            "id": "Divider11",
+            "name": "■■■■■■■■头发物理■■■"
+          },
+          {
+            "id": "Divider12",
+            "name": "■■■■■■■■头配饰■■■■"
+          },
+          {
+            "id": "Divider13",
+            "name": "■■■■■■■■兽耳■■■■"
+          },
+          {
+            "id": "Divider14",
+            "name": "■■■■■■■■上衣■■■■"
+          },
+          {
+            "id": "Divider15",
+            "name": "■■■ 口物理 ■■■"
+          },
+          {
+            "id": "Divider16",
+            "name": "■■■■■■■■眼睛动画■■■■■■"
+          },
+          {
+            "id": "Divider18",
+            "name": "■■■■■■■■胸■■■■"
+          },
+          {
+            "id": "Divider19",
+            "name": "■■■■■身体物理■■■■"
+          },
+          {
+            "id": "Divider20",
+            "name": "■■■■■■■■裙子■■■■"
+          },
+          {
+            "id": "Divider22",
+            "name": "■■■■■■■■动画■■■■"
+          },
+          {
+            "id": "Divider23",
+            "name": "■■■■■■■■■■■■"
+          },
+          {
+            "id": "Divider24",
+            "name": "■■■■■■逸散的光点■■■■"
+          },
+          {
+            "id": "Divider25",
+            "name": "■■■■■■飘花特效■■■■"
+          },
+          {
+            "id": "Divider28",
+            "name": "■■■■■■生气■■■■"
+          },
+          {
+            "id": "Divider31",
+            "name": "■■■■■■■■VB■■■■"
+          },
+          {
+            "id": "Divider33",
+            "name": "■■■■■■■■动画■■■■"
+          }
+        ],
+        "idleTrigger": [
+          {
+            "id": "IDLE",
+            "name": "IDLE"
+          }
+        ],
+        "experimental": [
+          {
+            "id": "NoseNeer",
+            "name": "NosePositionY"
+          },
+          {
+            "id": "MouthRollUpper",
+            "name": "MouthRollUpper"
+          },
+          {
+            "id": "MouthRollLower",
+            "name": "MouthRollLower"
+          }
+        ],
+        "gestureSystem": [
+          {
+            "id": "Movement2",
+            "name": "Movement2"
+          },
+          {
+            "id": "Movement3",
+            "name": "Movement3"
+          },
+          {
+            "id": "Movement1",
+            "name": "Movement1"
+          },
+          {
+            "id": "Param62",
+            "name": "L 大臂z"
+          },
+          {
+            "id": "Param59",
+            "name": "大臂透视"
+          },
+          {
+            "id": "Param60",
+            "name": "L小臂 Z"
+          },
+          {
+            "id": "Param61",
+            "name": "L手腕 Z"
+          },
+          {
+            "id": "Param36",
+            "name": "R大臂z"
+          },
+          {
+            "id": "Param39",
+            "name": "大臂透视"
+          },
+          {
+            "id": "Param41",
+            "name": "R小臂 Z"
+          },
+          {
+            "id": "Param42",
+            "name": "R手腕 Z"
+          },
+          {
+            "id": "Param43",
+            "name": "R 食指"
+          }
+        ],
+        "appearance": [
+          {
+            "id": "Clothes1",
+            "name": "1. 长短裙切换"
+          },
+          {
+            "id": "Clothes2",
+            "name": "Clothes2"
+          },
+          {
+            "id": "Clothes3",
+            "name": "3. 胸口衣服"
+          },
+          {
+            "id": "Clothes4",
+            "name": "4. 鞋子"
+          },
+          {
+            "id": "Clothes5",
+            "name": "5. 尾巴"
+          },
+          {
+            "id": "Param",
+            "name": "大小变位置"
+          }
+        ],
+        "animationTrigger": [
+          {
+            "id": "Ani1",
+            "name": "动画1"
+          },
+          {
+            "id": "Ani2",
+            "name": "动画2"
+          }
+        ]
+      },
+      "exclusiveGroups": [
+        {
+          "id": "face-effect",
+          "label": "表情/脸部特效：一次只亮一个",
+          "mode": "single",
+          "members": [
+            "key1",
+            "key2",
+            "key3",
+            "key4",
+            "key5",
+            "key6",
+            "key7",
+            "key8",
+            "key9",
+            "key10",
+            "key11",
+            "key12",
+            "key13"
+          ]
+        },
+        {
+          "id": "gesture",
+          "label": "手部姿态：JEV 的 h{i} 选项集；裸开关归手势系统",
+          "mode": "single",
+          "members": [
+            "Movement1",
+            "Movement2",
+            "Movement3"
+          ]
+        },
+        {
+          "id": "sweat",
+          "label": "冒汗特效：一次只亮一个",
+          "mode": "single",
+          "members": [
+            "SweatBurst1",
+            "SweatBurst2",
+            "SweatBurst3",
+            "SweatBurst4",
+            "SweatBurst5",
+            "SweatBurst6"
+          ]
+        },
+        {
+          "id": "face-animation",
+          "label": "脸部动画开关",
+          "mode": "single",
+          "members": [
+            "SWITCHA",
+            "F1Anikey",
+            "F2Anikey",
+            "F3Anikey"
+          ]
+        },
+        {
+          "id": "cry",
+          "label": "落泪：同一效果的两个通道",
+          "mode": "single",
+          "members": [
+            "RCryKey",
+            "LCryKey"
+          ]
+        }
+      ],
+      "gearOverrides": {
+        "AniEyerolling": {
+          "mode": "step",
+          "reason": "蚊香眼：量程 [0,30] 非 0..1，会被当成连续通道；只允许端点，上限需实测"
+        },
+        "ParamEyeLOpen": {
+          "mode": "review",
+          "reason": "量程 [0,1.5]、default 1：正向 large 档 1.45 超过正常睁眼开度，需实测确认是否允许"
+        },
+        "ParamBreath": {
+          "mode": "review",
+          "reason": "呼吸由表演层 IdleEngine 驱动；若让判断层接管，须先把它从 passthrough 摘出"
+        },
+        "Param11": {
+          "mode": "review",
+          "reason": "呆滞：量程 [0,8] 单边档位，语义是程度还是开关未确认"
+        },
+        "AngleXbs2": {
+          "mode": "review",
+          "reason": "角度 Xbs -15：default 压在端点 -30，只有正向档位"
+        },
+        "AngleXbs3": {
+          "mode": "review",
+          "reason": "角度 Xbs +15：default 压在端点 30，只有负向档位"
+        }
+      },
+      "review": [
+        {
+          "id": "ParamSilence",
+          "reason": "default=1 的开关，名字未说明用途；确认前不排除也不接管"
+        },
+        {
+          "id": "Clothes2",
+          "reason": "大小变与 Param(大小变位置) 联动：若保留这个喜剧效果，两者要一起从 excluded 移出并放进同一互斥组"
+        },
+        {
+          "id": "Param38",
+          "reason": "Soullink 把它当手部开关，实际是动画双手开关；目前按手部开关处理，可用性待实测"
+        },
+        {
+          "id": "Param40",
+          "reason": "竖手指 大臂无缝用：内部辅助通道，暴露给判断层前的行为未验证"
+        }
+      ],
+      "notes": [
+        "declared 是判断不是推导：derive-performance-rules.mjs 只在缺失时起草，之后不覆盖",
+        "外观（服装/鞋子/尾巴/大小变）一律不交给判断层：换装是用户的选择，不是角色的表演",
+        "裸手势开关归手势系统，但保留 gesture 单选组作为 JEV 的 h{i} 选项集"
+      ]
+    }
+  }
+}

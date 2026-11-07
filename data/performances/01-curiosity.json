@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "title": "疑惑 → 思考 → 恍然大悟",
+  "intent": "疑惑 → 思考 → 恍然大悟",
+  "summary": "复杂表演测试：多通道组合，保留作者物理，完成后回到自然待机。",
+  "actions": [
+    {
+      "kind": "look",
+      "at": 0,
+      "duration": 4,
+      "direction": "left",
+      "strength": 0.65
+    },
+    {
+      "kind": "tilt",
+      "at": 0.5,
+      "duration": 3.5,
+      "direction": "right",
+      "strength": 0.65
+    },
+    {
+      "kind": "pose",
+      "at": 0.3,
+      "duration": 3.7,
+      "label": "疑惑：左右眉不对称",
+      "values": {
+        "ParamBrowLY": 0.5,
+        "ParamBrowRY": -0.2,
+        "BrowInnerUp": 0.35,
+        "ParamMouthForm": -0.2
+      }
+    },
+    {
+      "kind": "expression",
+      "at": 4.5,
+      "duration": 3,
+      "name": "加载",
+      "strength": 1
+    },
+    {
+      "kind": "pose",
+      "at": 4.5,
+      "duration": 3,
+      "label": "思考：收眼、侧看",
+      "values": {
+        "ParamEyeLOpen": 0.72,
+        "ParamEyeROpen": 0.72,
+        "ParamEyeBallX": 0.45,
+        "AngleZ": -7
+      }
+    },
+    {
+      "kind": "gesture",
+      "at": 8,
+      "duration": 8,
+      "name": "point"
+    },
+    {
+      "kind": "pose",
+      "at": 8,
+      "duration": 2.5,
+      "label": "领悟：抬眉、睁眼、小幅张嘴",
+      "values": {
+        "ParamBrowLY": 0.6,
+        "ParamBrowRY": 0.6,
+        "ParamEyeLOpen": 1.25,
+        "ParamEyeROpen": 1.25,
+        "ParamMouthOpenY": 0.3
+      }
+    },
+    {
+      "kind": "smile",
+      "at": 10.6,
+      "duration": 6,
+      "strength": 0.75
+    },
+    {
+      "kind": "talk",
+      "at": 10.6,
+      "duration": 4.5,
+      "strength": 0.65
+    },
+    {
+      "kind": "nod",
+      "at": 11.2,
+      "duration": 3.8,
+      "count": 2,
+      "strength": 0.6
+    },
+    {
+      "kind": "pose",
+      "at": 10.6,
+      "duration": 5,
+      "label": "解释时轻微前倾",
+      "values": {
+        "LeanInput": -12,
+        "AngleZ": 5,
+        "PositionZ": -2
+      }
+    },
+    {
+      "kind": "blink",
+      "at": 16.7,
+      "duration": 1.2,
+      "side": "left"
+    },
+    {
+      "kind": "smile",
+      "at": 17,
+      "duration": 2.5,
+      "strength": 0.5
+    }
+  ]
+}

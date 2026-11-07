@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "title": "左右换重心 · 腿部联动",
+  "intent": "左右换重心 · 腿部联动",
+  "summary": "全身肢体探索：腿部由作者物理联动，手臂关节在原生手势中调整，保留完整进入与退出。",
+  "view": "full",
+  "group": "limbs",
+  "icon": "↔",
+  "caption": "全身 · 重心转移 · 双腿联动 / 27s",
+  "actions": [
+    {
+      "kind": "pose",
+      "at": 0,
+      "duration": 6,
+      "label": "向一侧移重心",
+      "values": {
+        "PositionX": -14,
+        "PositionZ": -5,
+        "AngleZ": 4
+      }
+    },
+    {
+      "kind": "pose",
+      "at": 6.5,
+      "duration": 6,
+      "label": "向另一侧移重心",
+      "values": {
+        "PositionX": 14,
+        "PositionZ": 5,
+        "AngleZ": -4
+      }
+    },
+    {
+      "kind": "pose",
+      "at": 13,
+      "duration": 6,
+      "label": "侧倾：观察双腿平衡",
+      "values": {
+        "PositionZ": -13,
+        "PositionY": -3,
+        "AngleZ": 6
+      }
+    },
+    {
+      "kind": "pose",
+      "at": 19.5,
+      "duration": 6,
+      "label": "反向侧倾：观察双腿平衡",
+      "values": {
+        "PositionZ": 13,
+        "PositionY": 3,
+        "AngleZ": -6
+      }
+    },
+    {
+      "kind": "smile",
+      "at": 0,
+      "duration": 20,
+      "strength": 0.35
+    }
+  ]
+}

@@ -1,0 +1,422 @@
+{
+  "version": 1,
+  "title": "侧目试探 → 靠近逗你 → 带笑回望",
+  "intent": "含蓄的暧昧挑逗：侧目观察你，微笑歪头，抚胸靠近，眨一只眼，再稍稍退回带笑看你。",
+  "summary": "侧目、轻笑与抚胸靠近；靠近时把作者前倾表情叠加到当前连续姿态，随后退回、回望并恢复。",
+  "view": "portrait",
+  "group": "expressive",
+  "icon": "♡",
+  "caption": "含蓄挑逗 · 侧目靠近 · 29 秒",
+  "actions": [
+    {
+      "kind": "trajectory",
+      "at": 0,
+      "duration": 14,
+      "label": "侧过身，慢慢靠近",
+      "frames": [
+        {
+          "time": 1.2,
+          "values": {
+            "AngleX": -20,
+            "AngleY": 7,
+            "AngleZ": -12,
+            "PositionX": -15,
+            "PositionY": 4,
+            "PositionZ": -9,
+            "LeanInput": 0
+          }
+        },
+        {
+          "time": 3.2,
+          "values": {
+            "AngleX": -20,
+            "AngleY": 7,
+            "AngleZ": -12,
+            "PositionX": -15,
+            "PositionY": 4,
+            "PositionZ": -9,
+            "LeanInput": 0
+          }
+        },
+        {
+          "time": 5.5,
+          "values": {
+            "AngleX": -8,
+            "AngleY": -5,
+            "AngleZ": 13,
+            "PositionX": -7,
+            "PositionY": -6,
+            "PositionZ": 9,
+            "LeanInput": -10
+          }
+        },
+        {
+          "time": 8,
+          "values": {
+            "AngleX": 10,
+            "AngleY": -14,
+            "AngleZ": 16,
+            "PositionX": 9,
+            "PositionY": -12,
+            "PositionZ": 13,
+            "LeanInput": -22
+          }
+        },
+        {
+          "time": 11,
+          "values": {
+            "AngleX": 14,
+            "AngleY": -10,
+            "AngleZ": 12,
+            "PositionX": 12,
+            "PositionY": -9,
+            "PositionZ": 10,
+            "LeanInput": -20
+          }
+        },
+        {
+          "time": 13,
+          "values": {
+            "AngleX": 4,
+            "AngleY": -4,
+            "AngleZ": 5,
+            "PositionX": 4,
+            "PositionY": -3,
+            "PositionZ": 4,
+            "LeanInput": -8
+          }
+        }
+      ]
+    },
+    {
+      "kind": "trajectory",
+      "at": 0.1,
+      "duration": 14,
+      "label": "目光先移向你，再稍稍避开",
+      "frames": [
+        {
+          "time": 0.4,
+          "values": {
+            "ParamEyeBallX": 0.55,
+            "ParamEyeBallY": 0.05
+          }
+        },
+        {
+          "time": 2,
+          "values": {
+            "ParamEyeBallX": 0.45,
+            "ParamEyeBallY": 0.1
+          }
+        },
+        {
+          "time": 4,
+          "values": {
+            "ParamEyeBallX": 0,
+            "ParamEyeBallY": 0.12
+          }
+        },
+        {
+          "time": 7,
+          "values": {
+            "ParamEyeBallX": 0,
+            "ParamEyeBallY": 0.2
+          }
+        },
+        {
+          "time": 9,
+          "values": {
+            "ParamEyeBallX": 0.12,
+            "ParamEyeBallY": 0.2
+          }
+        },
+        {
+          "time": 11.7,
+          "values": {
+            "ParamEyeBallX": -0.35,
+            "ParamEyeBallY": -0.15
+          }
+        },
+        {
+          "time": 13,
+          "values": {
+            "ParamEyeBallX": 0,
+            "ParamEyeBallY": 0
+          }
+        }
+      ]
+    },
+    {
+      "kind": "trajectory",
+      "at": 0.5,
+      "duration": 13,
+      "label": "微笑、轻挑眉、柔和眯眼",
+      "frames": [
+        {
+          "time": 1,
+          "values": {
+            "ParamMouthForm": 0.55,
+            "MouthSmile_L": 0.6,
+            "MouthSmile_R": 0.35,
+            "LEyeSquint": 0.25,
+            "REyeSquint": 0.15,
+            "ParamBrowLY": 0.35,
+            "ParamBrowRY": 0,
+            "MouthX": -0.2
+          }
+        },
+        {
+          "time": 3,
+          "values": {
+            "ParamMouthForm": 0.7,
+            "MouthSmile_L": 0.7,
+            "MouthSmile_R": 0.4,
+            "LEyeSquint": 0.35,
+            "REyeSquint": 0.2,
+            "ParamBrowLY": 0.5,
+            "ParamBrowRY": -0.1,
+            "MouthX": -0.35
+          }
+        },
+        {
+          "time": 6,
+          "values": {
+            "ParamMouthForm": 0.8,
+            "MouthSmile_L": 0.65,
+            "MouthSmile_R": 0.55,
+            "LEyeSquint": 0.3,
+            "REyeSquint": 0.3,
+            "ParamBrowLY": 0.2,
+            "ParamBrowRY": 0.05,
+            "MouthX": 0
+          }
+        },
+        {
+          "time": 9,
+          "values": {
+            "ParamMouthForm": 0.85,
+            "MouthSmile_L": 0.75,
+            "MouthSmile_R": 0.55,
+            "LEyeSquint": 0.4,
+            "REyeSquint": 0.25,
+            "ParamBrowLY": 0.25,
+            "ParamBrowRY": 0,
+            "MouthX": 0.15
+          }
+        },
+        {
+          "time": 11.5,
+          "values": {
+            "ParamMouthForm": 0.5,
+            "MouthSmile_L": 0.4,
+            "MouthSmile_R": 0.3,
+            "LEyeSquint": 0.2,
+            "REyeSquint": 0.2,
+            "ParamBrowLY": 0.1,
+            "ParamBrowRY": 0,
+            "MouthX": 0
+          }
+        }
+      ]
+    },
+    {
+      "kind": "expression",
+      "name": "脸红",
+      "at": 4,
+      "duration": 19,
+      "strength": 0.65
+    },
+    {
+      "kind": "gesture",
+      "name": "hand_on_chest",
+      "at": 5,
+      "duration": 17,
+      "accents": [
+        {
+          "at": 2,
+          "duration": 4,
+          "values": {
+            "upperArm": -0.25,
+            "perspective": 0.55,
+            "forearm": 0.7,
+            "wrist": -0.45
+          }
+        },
+        {
+          "at": 8,
+          "duration": 4,
+          "values": {
+            "wrist": 0.35,
+            "upperArm": -0.15
+          }
+        }
+      ]
+    },
+    {
+      "kind": "blink",
+      "side": "right",
+      "at": 10,
+      "duration": 0.85
+    },
+    {
+      "kind": "trajectory",
+      "at": 14.2,
+      "duration": 14,
+      "label": "稍稍退回，再含笑回望",
+      "frames": [
+        {
+          "time": 1,
+          "values": {
+            "AngleX": 6,
+            "AngleY": -7,
+            "AngleZ": 8,
+            "PositionX": 5,
+            "PositionY": -5,
+            "PositionZ": 7,
+            "LeanInput": -12
+          }
+        },
+        {
+          "time": 3.5,
+          "values": {
+            "AngleX": -18,
+            "AngleY": 10,
+            "AngleZ": -15,
+            "PositionX": -15,
+            "PositionY": 8,
+            "PositionZ": -12,
+            "LeanInput": 4
+          }
+        },
+        {
+          "time": 6,
+          "values": {
+            "AngleX": -22,
+            "AngleY": 8,
+            "AngleZ": -18,
+            "PositionX": -18,
+            "PositionY": 6,
+            "PositionZ": -14,
+            "LeanInput": 0
+          }
+        },
+        {
+          "time": 8.5,
+          "values": {
+            "AngleX": -12,
+            "AngleY": -6,
+            "AngleZ": 12,
+            "PositionX": -8,
+            "PositionY": -5,
+            "PositionZ": 9,
+            "LeanInput": -14
+          }
+        },
+        {
+          "time": 11,
+          "values": {
+            "AngleX": 5,
+            "AngleY": 3,
+            "AngleZ": 6,
+            "PositionX": 4,
+            "PositionY": 2,
+            "PositionZ": 4,
+            "LeanInput": -4
+          }
+        },
+        {
+          "time": 13,
+          "values": {
+            "AngleX": 0,
+            "AngleY": 0,
+            "AngleZ": 0,
+            "PositionX": 0,
+            "PositionY": 0,
+            "PositionZ": 0,
+            "LeanInput": 0
+          }
+        }
+      ]
+    },
+    {
+      "kind": "trajectory",
+      "at": 14.2,
+      "duration": 14,
+      "label": "回望与你对视",
+      "frames": [
+        {
+          "time": 1,
+          "values": {
+            "ParamEyeBallX": -0.2,
+            "ParamEyeBallY": -0.1
+          }
+        },
+        {
+          "time": 3,
+          "values": {
+            "ParamEyeBallX": 0.6,
+            "ParamEyeBallY": 0
+          }
+        },
+        {
+          "time": 6,
+          "values": {
+            "ParamEyeBallX": 0.55,
+            "ParamEyeBallY": 0.1
+          }
+        },
+        {
+          "time": 8,
+          "values": {
+            "ParamEyeBallX": 0,
+            "ParamEyeBallY": 0.1
+          }
+        },
+        {
+          "time": 11,
+          "values": {
+            "ParamEyeBallX": 0,
+            "ParamEyeBallY": 0
+          }
+        },
+        {
+          "time": 13,
+          "values": {
+            "ParamEyeBallX": 0,
+            "ParamEyeBallY": 0
+          }
+        }
+      ]
+    },
+    {
+      "kind": "smile",
+      "at": 14.2,
+      "duration": 14,
+      "strength": 0.9
+    },
+    {
+      "kind": "pose",
+      "at": 17,
+      "duration": 6,
+      "label": "带一点得意的笑意",
+      "values": {
+        "LEyeSquint": 0.45,
+        "REyeSquint": 0.2,
+        "MouthX": -0.25,
+        "ParamBrowLY": 0.35
+      }
+    },
+    {
+      "kind": "blink",
+      "at": 25,
+      "duration": 0.8
+    },
+    {
+      "kind": "expression",
+      "name": "前倾",
+      "at": 7,
+      "duration": 4,
+      "strength": 0.12,
+      "layer": "overlay"
+    }
+  ]
+}

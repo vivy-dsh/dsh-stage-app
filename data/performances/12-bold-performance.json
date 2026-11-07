@@ -1,0 +1,347 @@
+{
+  "title": "大胆逗趣 → 惊讶后退 → 抚胸大笑",
+  "group": "fullbody-emotion",
+  "icon": "✦",
+  "caption": "大幅联动 · 连续表演 · 38 秒",
+  "actions": [
+    {
+      "kind": "trajectory",
+      "at": 0.2,
+      "duration": 12,
+      "label": "左右探身，手指配合挑眉",
+      "frames": [
+        {
+          "time": 1,
+          "values": {
+            "AngleX": 22,
+            "AngleY": 8,
+            "AngleZ": 14,
+            "PositionX": 20,
+            "PositionY": 5,
+            "PositionZ": 12,
+            "LeanInput": -8,
+            "ParamEyeBallX": 0.55
+          }
+        },
+        {
+          "time": 3,
+          "values": {
+            "AngleX": 26,
+            "AngleY": 12,
+            "AngleZ": 18,
+            "PositionX": 23,
+            "PositionY": 8,
+            "PositionZ": 16,
+            "LeanInput": -12,
+            "ParamEyeBallX": 0.7
+          }
+        },
+        {
+          "time": 5,
+          "values": {
+            "AngleX": -22,
+            "AngleY": -8,
+            "AngleZ": -16,
+            "PositionX": -20,
+            "PositionY": -5,
+            "PositionZ": -14,
+            "LeanInput": -8,
+            "ParamEyeBallX": -0.6
+          }
+        },
+        {
+          "time": 7,
+          "values": {
+            "AngleX": -26,
+            "AngleY": -12,
+            "AngleZ": -20,
+            "PositionX": -23,
+            "PositionY": -10,
+            "PositionZ": -18,
+            "LeanInput": -15,
+            "ParamEyeBallX": -0.7
+          }
+        },
+        {
+          "time": 9,
+          "values": {
+            "AngleX": 16,
+            "AngleY": 8,
+            "AngleZ": 12,
+            "PositionX": 15,
+            "PositionY": 4,
+            "PositionZ": 10,
+            "LeanInput": -8,
+            "ParamEyeBallX": 0.4
+          }
+        },
+        {
+          "time": 11,
+          "values": {
+            "AngleX": 6,
+            "AngleY": 2,
+            "AngleZ": 4,
+            "PositionX": 6,
+            "PositionY": 2,
+            "PositionZ": 4,
+            "LeanInput": 0,
+            "ParamEyeBallX": 0.1
+          }
+        }
+      ]
+    },
+    {
+      "kind": "pose",
+      "at": 0.5,
+      "duration": 5,
+      "label": "坏笑挑眉",
+      "values": {
+        "ParamBrowLY": 0.8,
+        "ParamBrowRY": -0.4,
+        "ParamMouthForm": 0.8,
+        "MouthX": -0.6,
+        "LEyeSquint": 0.6
+      }
+    },
+    {
+      "kind": "pose",
+      "at": 6,
+      "duration": 5,
+      "label": "眯眼笑着反问",
+      "values": {
+        "ParamMouthForm": 0.9,
+        "REyeSquint": 0.7,
+        "MouthPuckerWiden": 0.55,
+        "ParamMouthOpenY": 0.3
+      }
+    },
+    {
+      "kind": "expression",
+      "name": "兔牙",
+      "at": 6,
+      "duration": 4.5,
+      "strength": 1
+    },
+    {
+      "kind": "trajectory",
+      "at": 12.5,
+      "duration": 8,
+      "label": "惊讶：身体后撤，再倾身确认",
+      "frames": [
+        {
+          "time": 0.7,
+          "values": {
+            "AngleX": -14,
+            "AngleY": 20,
+            "AngleZ": -14,
+            "PositionX": -16,
+            "PositionY": 18,
+            "PositionZ": -16,
+            "LeanInput": 18
+          }
+        },
+        {
+          "time": 2,
+          "values": {
+            "AngleX": -14,
+            "AngleY": 20,
+            "AngleZ": -14,
+            "PositionX": -16,
+            "PositionY": 18,
+            "PositionZ": -16,
+            "LeanInput": 18
+          }
+        },
+        {
+          "time": 4,
+          "values": {
+            "AngleX": 18,
+            "AngleY": -16,
+            "AngleZ": 12,
+            "PositionX": 18,
+            "PositionY": -16,
+            "PositionZ": 14,
+            "LeanInput": -22
+          }
+        },
+        {
+          "time": 6,
+          "values": {
+            "AngleX": 10,
+            "AngleY": -12,
+            "AngleZ": 8,
+            "PositionX": 10,
+            "PositionY": -12,
+            "PositionZ": 8,
+            "LeanInput": -18
+          }
+        }
+      ]
+    },
+    {
+      "kind": "pose",
+      "at": 12.7,
+      "duration": 3.6,
+      "label": "瞪眼张口",
+      "values": {
+        "ParamEyeLOpen": 1.5,
+        "ParamEyeROpen": 1.5,
+        "ParamBrowLY": 1,
+        "ParamBrowRY": 1,
+        "MouthFunnel": 0.65,
+        "ParamMouthOpenY": 0.75
+      }
+    },
+    {
+      "kind": "expression",
+      "name": "流冷汗",
+      "at": 13,
+      "duration": 3,
+      "strength": 1
+    },
+    {
+      "kind": "expression",
+      "name": "脸红",
+      "at": 18,
+      "duration": 17,
+      "strength": 1
+    },
+    {
+      "kind": "gesture",
+      "name": "hand_on_chest",
+      "at": 21,
+      "duration": 14,
+      "accents": [
+        {
+          "at": 2,
+          "duration": 3,
+          "values": {
+            "upperArm": -0.5,
+            "perspective": 0.7,
+            "forearm": 0.6,
+            "wrist": -0.65
+          }
+        },
+        {
+          "at": 6,
+          "duration": 3,
+          "values": {
+            "upperArm": -0.3,
+            "wrist": 0.65
+          }
+        }
+      ]
+    },
+    {
+      "kind": "trajectory",
+      "at": 21,
+      "duration": 16,
+      "label": "抚胸笑弯腰，再侧身抬头",
+      "frames": [
+        {
+          "time": 1,
+          "values": {
+            "AngleX": 12,
+            "AngleY": -12,
+            "AngleZ": 12,
+            "PositionX": 12,
+            "PositionY": -15,
+            "PositionZ": 12,
+            "LeanInput": -20
+          }
+        },
+        {
+          "time": 4,
+          "values": {
+            "AngleX": -12,
+            "AngleY": -24,
+            "AngleZ": -14,
+            "PositionX": -12,
+            "PositionY": -22,
+            "PositionZ": -14,
+            "LeanInput": -25
+          }
+        },
+        {
+          "time": 7,
+          "values": {
+            "AngleX": 20,
+            "AngleY": 15,
+            "AngleZ": 20,
+            "PositionX": 18,
+            "PositionY": 14,
+            "PositionZ": 18,
+            "LeanInput": -5
+          }
+        },
+        {
+          "time": 10,
+          "values": {
+            "AngleX": -20,
+            "AngleY": -18,
+            "AngleZ": -18,
+            "PositionX": -18,
+            "PositionY": -18,
+            "PositionZ": -16,
+            "LeanInput": -22
+          }
+        },
+        {
+          "time": 13,
+          "values": {
+            "AngleX": 12,
+            "AngleY": 10,
+            "AngleZ": 12,
+            "PositionX": 12,
+            "PositionY": 8,
+            "PositionZ": 10,
+            "LeanInput": -6
+          }
+        },
+        {
+          "time": 15,
+          "values": {
+            "AngleX": 0,
+            "AngleY": 0,
+            "AngleZ": 0,
+            "PositionX": 0,
+            "PositionY": 0,
+            "PositionZ": 0,
+            "LeanInput": 0
+          }
+        }
+      ]
+    },
+    {
+      "kind": "pose",
+      "at": 22,
+      "duration": 12,
+      "label": "开怀大笑",
+      "values": {
+        "EyeSmile": 1,
+        "ParamMouthForm": 1,
+        "MouthSmile_L": 1,
+        "MouthSmile_R": 1,
+        "ParamMouthOpenY": 0.65,
+        "LEyeSquint": 0.45,
+        "REyeSquint": 0.45
+      }
+    },
+    {
+      "kind": "blink",
+      "at": 25,
+      "duration": 1.2,
+      "count": 2
+    },
+    {
+      "kind": "blink",
+      "at": 30,
+      "duration": 1.2,
+      "count": 2
+    }
+  ],
+  "version": 1,
+  "intent": "大胆逗趣 → 惊讶后退 → 抚胸大笑",
+  "summary": "扩大作者输入幅度，以连续多轴轨迹探索形变；保留原生物理及手势进入退出。",
+  "view": "full"
+}

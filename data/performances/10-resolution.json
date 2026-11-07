@@ -1,0 +1,164 @@
+{
+  "version": 1,
+  "title": "犹豫求助 → 想通 → 自信讲解",
+  "intent": "犹豫求助 → 想通 → 自信讲解",
+  "summary": "先垂手收肩求助，思考后站稳，竖指配合腕指变化解释，最后点头确认。",
+  "view": "full",
+  "group": "fullbody-emotion",
+  "icon": "☝",
+  "actions": [
+    {
+      "kind": "pose",
+      "at": 0.3,
+      "duration": 7,
+      "label": "犹豫：侧移重心、低头抬眉心",
+      "values": {
+        "PositionX": -7,
+        "PositionZ": -4,
+        "AngleY": -5,
+        "AngleZ": 5,
+        "ParamEyeBallX": -0.2,
+        "BrowInnerUp": 0.6,
+        "ParamMouthForm": -0.25,
+        "ParamEyeLOpen": 0.85,
+        "ParamEyeROpen": 0.85
+      }
+    },
+    {
+      "kind": "expression",
+      "at": 0.6,
+      "duration": 4.3,
+      "name": "流冷汗",
+      "strength": 0.35
+    },
+    {
+      "kind": "blink",
+      "at": 7.4,
+      "duration": 0.8
+    },
+    {
+      "kind": "pose",
+      "at": 9,
+      "duration": 4.4,
+      "label": "思考：换重心，抬眼停顿",
+      "values": {
+        "PositionX": 5,
+        "PositionZ": 3,
+        "AngleZ": -6,
+        "ParamEyeBallY": 0.3,
+        "ParamEyeLOpen": 0.8,
+        "ParamEyeROpen": 0.8,
+        "ParamBrowLY": 0.35,
+        "ParamBrowRY": -0.15
+      }
+    },
+    {
+      "kind": "expression",
+      "at": 9.4,
+      "duration": 3.3,
+      "name": "加载",
+      "strength": 0.75
+    },
+    {
+      "kind": "pose",
+      "at": 14,
+      "duration": 2,
+      "label": "想通：抬眉、轻轻张嘴",
+      "values": {
+        "ParamBrowLY": 0.5,
+        "ParamBrowRY": 0.5,
+        "ParamEyeLOpen": 1.15,
+        "ParamEyeROpen": 1.15,
+        "ParamMouthOpenY": 0.22
+      }
+    },
+    {
+      "kind": "gesture",
+      "at": 14.5,
+      "duration": 13,
+      "name": "point",
+      "accents": [
+        {
+          "at": 2,
+          "duration": 2.5,
+          "values": {
+            "upperArm": -0.2,
+            "perspective": 0.4
+          }
+        },
+        {
+          "at": 5,
+          "duration": 2.4,
+          "values": {
+            "wrist": 0.3,
+            "finger": 0.5
+          }
+        },
+        {
+          "at": 8,
+          "duration": 2.4,
+          "values": {
+            "forearm": 0.4,
+            "wrist": -0.2
+          }
+        }
+      ]
+    },
+    {
+      "kind": "pose",
+      "at": 16.5,
+      "duration": 5.2,
+      "label": "自信：重心稳住，身体随讲解前倾",
+      "values": {
+        "PositionX": 7,
+        "PositionZ": 4,
+        "LeanInput": -8,
+        "AngleZ": -3,
+        "ParamEyeBallX": 0.15
+      }
+    },
+    {
+      "kind": "smile",
+      "at": 16.5,
+      "duration": 11,
+      "strength": 0.65
+    },
+    {
+      "kind": "talk",
+      "at": 17,
+      "duration": 7,
+      "strength": 0.55
+    },
+    {
+      "kind": "nod",
+      "at": 20,
+      "duration": 2.8,
+      "strength": 0.35
+    },
+    {
+      "kind": "pose",
+      "at": 22,
+      "duration": 5,
+      "label": "补充：重心缓缓换侧，目光回到你",
+      "values": {
+        "PositionX": -5,
+        "PositionZ": -3,
+        "AngleZ": 3,
+        "ParamEyeBallX": 0
+      }
+    },
+    {
+      "kind": "nod",
+      "at": 28.1,
+      "duration": 2.4,
+      "strength": 0.35
+    },
+    {
+      "kind": "smile",
+      "at": 28,
+      "duration": 3,
+      "strength": 0.4
+    }
+  ],
+  "caption": "全身情绪表演 · 32 秒"
+}

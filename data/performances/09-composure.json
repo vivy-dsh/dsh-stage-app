@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "title": "强装镇定 → 慌张 → 坦然致谢",
+  "intent": "强装镇定 → 慌张 → 坦然致谢",
+  "summary": "先以头身姿态强装镇定，受到质疑后移开视线，最后抚胸前倾致谢。",
+  "view": "full",
+  "group": "fullbody-emotion",
+  "icon": "✦",
+  "actions": [
+    {
+      "kind": "pose",
+      "at": 0.2,
+      "duration": 5.8,
+      "label": "镇定：侧身站稳，微微抬头",
+      "values": {
+        "PositionX": -7,
+        "PositionZ": -4,
+        "AngleZ": 4,
+        "AngleY": 5,
+        "ParamEyeBallX": -0.22,
+        "ParamBrowLY": 0.3,
+        "ParamBrowRY": -0.1
+      }
+    },
+    {
+      "kind": "expression",
+      "at": 0.7,
+      "duration": 4.5,
+      "name": "屑屑眼",
+      "strength": 0.65
+    },
+    {
+      "kind": "smile",
+      "at": 0.7,
+      "duration": 5.2,
+      "strength": 0.55
+    },
+    {
+      "kind": "talk",
+      "at": 2,
+      "duration": 3.5,
+      "strength": 0.4
+    },
+    {
+      "kind": "pose",
+      "at": 6.3,
+      "duration": 2.2,
+      "label": "察觉异样：转眼、收敛笑意",
+      "values": {
+        "ParamEyeBallX": 0.35,
+        "ParamEyeBallY": 0.15,
+        "BrowInnerUp": 0.35,
+        "AngleY": -2
+      }
+    },
+    {
+      "kind": "expression",
+      "at": 9,
+      "duration": 4.6,
+      "name": "流冷汗",
+      "strength": 0.7
+    },
+    {
+      "kind": "pose",
+      "at": 9,
+      "duration": 4.6,
+      "label": "慌张：重心移到另一侧，眉眼张开",
+      "values": {
+        "PositionX": 8,
+        "PositionZ": 4,
+        "AngleZ": -5,
+        "ParamEyeLOpen": 1.2,
+        "ParamEyeROpen": 1.2,
+        "ParamBrowLY": 0.5,
+        "ParamBrowRY": 0.5,
+        "ParamMouthOpenY": 0.2
+      }
+    },
+    {
+      "kind": "expression",
+      "at": 14,
+      "duration": 6,
+      "name": "脸红",
+      "strength": 0.65
+    },
+    {
+      "kind": "pose",
+      "at": 14,
+      "duration": 5.8,
+      "label": "难为情：低头，重心轻轻收回",
+      "values": {
+        "PositionX": -5,
+        "PositionZ": -3,
+        "AngleY": -7,
+        "AngleZ": 4,
+        "ParamEyeBallY": -0.25,
+        "BrowInnerUp": 0.45,
+        "ParamMouthForm": -0.18
+      }
+    },
+    {
+      "kind": "blink",
+      "at": 16,
+      "duration": 1.1,
+      "count": 2
+    },
+    {
+      "kind": "gesture",
+      "at": 20.5,
+      "duration": 8,
+      "name": "hand_on_chest",
+      "accents": [
+        {
+          "at": 2.1,
+          "duration": 2.6,
+          "values": {
+            "wrist": -0.25,
+            "forearm": 0.65
+          }
+        }
+      ]
+    },
+    {
+      "kind": "pose",
+      "at": 21,
+      "duration": 6.4,
+      "label": "坦然：重新站稳，前倾致意",
+      "values": {
+        "PositionX": 4,
+        "PositionZ": 2,
+        "LeanInput": -10,
+        "AngleZ": -3,
+        "ParamEyeBallX": 0
+      }
+    },
+    {
+      "kind": "smile",
+      "at": 20.6,
+      "duration": 8.2,
+      "strength": 0.65
+    },
+    {
+      "kind": "nod",
+      "at": 23.5,
+      "duration": 3.3,
+      "count": 2,
+      "strength": 0.45
+    },
+    {
+      "kind": "talk",
+      "at": 22,
+      "duration": 2.8,
+      "strength": 0.35
+    },
+    {
+      "kind": "blink",
+      "at": 29,
+      "duration": 0.8
+    },
+    {
+      "kind": "smile",
+      "at": 29,
+      "duration": 2.2,
+      "strength": 0.35
+    }
+  ],
+  "caption": "全身情绪表演 · 32 秒"
+}

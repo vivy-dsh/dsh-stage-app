@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "title": "委屈 → 犹豫 → 鼓起勇气",
+  "intent": "委屈 → 犹豫 → 鼓起勇气",
+  "summary": "复杂表演测试：多通道组合，保留作者物理，完成后回到自然待机。",
+  "actions": [
+    {
+      "kind": "expression",
+      "at": 0,
+      "duration": 6.5,
+      "name": "流泪",
+      "strength": 0.65
+    },
+    {
+      "kind": "pose",
+      "at": 0,
+      "duration": 6.5,
+      "label": "委屈：眉心抬起、嘴角下压",
+      "values": {
+        "BrowInnerUp": 0.8,
+        "ParamBrowLY": 0.2,
+        "ParamBrowRY": 0.2,
+        "ParamMouthForm": -0.65,
+        "ParamEyeLOpen": 0.78,
+        "ParamEyeROpen": 0.78
+      }
+    },
+    {
+      "kind": "look",
+      "at": 0.2,
+      "duration": 3.4,
+      "direction": "down",
+      "strength": 0.55
+    },
+    {
+      "kind": "tilt",
+      "at": 0.5,
+      "duration": 5,
+      "direction": "left",
+      "strength": 0.45
+    },
+    {
+      "kind": "shake_head",
+      "at": 3.7,
+      "duration": 2.6,
+      "count": 2,
+      "strength": 0.3
+    },
+    {
+      "kind": "gesture",
+      "at": 6.8,
+      "duration": 9,
+      "name": "hand_on_chest"
+    },
+    {
+      "kind": "expression",
+      "at": 7.1,
+      "duration": 7,
+      "name": "脸红",
+      "strength": 0.65
+    },
+    {
+      "kind": "pose",
+      "at": 7,
+      "duration": 3,
+      "label": "犹豫：眉心仍抬着",
+      "values": {
+        "BrowInnerUp": 0.45,
+        "ParamMouthForm": -0.15,
+        "AngleY": -5,
+        "LeanInput": -7
+      }
+    },
+    {
+      "kind": "smile",
+      "at": 10.3,
+      "duration": 6.5,
+      "strength": 0.65
+    },
+    {
+      "kind": "nod",
+      "at": 10.6,
+      "duration": 3.7,
+      "count": 2,
+      "strength": 0.55
+    },
+    {
+      "kind": "talk",
+      "at": 11,
+      "duration": 3.5,
+      "strength": 0.45
+    },
+    {
+      "kind": "pose",
+      "at": 14.7,
+      "duration": 3.6,
+      "label": "释然：回望、舒展",
+      "values": {
+        "AngleZ": 6,
+        "PositionZ": -2,
+        "ParamEyeBallY": 0.15
+      }
+    },
+    {
+      "kind": "smile",
+      "at": 17,
+      "duration": 2.4,
+      "strength": 0.4
+    }
+  ]
+}

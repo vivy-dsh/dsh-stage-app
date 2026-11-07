@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "title": "持草轻摆 · 身体配合",
+  "intent": "持草轻摆 · 身体配合",
+  "summary": "全身肢体探索：腿部由作者物理联动，手臂关节在原生手势中调整，保留完整进入与退出。",
+  "view": "full",
+  "group": "limbs",
+  "icon": "❧",
+  "caption": "全身 · 手腕轻摆 · 持草 · 重心 / 19s",
+  "actions": [
+    {
+      "kind": "gesture",
+      "at": 0,
+      "duration": 18,
+      "name": "grass",
+      "accents": [
+        {
+          "at": 2,
+          "duration": 2.8,
+          "values": {
+            "wrist": -0.4
+          }
+        },
+        {
+          "at": 5.3,
+          "duration": 2.8,
+          "values": {
+            "wrist": 0.4
+          }
+        },
+        {
+          "at": 8.6,
+          "duration": 2.8,
+          "values": {
+            "upperArm": -0.2,
+            "forearm": -0.5
+          }
+        },
+        {
+          "at": 11.9,
+          "duration": 2.8,
+          "values": {
+            "wrist": -0.25
+          }
+        }
+      ]
+    },
+    {
+      "kind": "pose",
+      "at": 2,
+      "duration": 6,
+      "label": "持草时向侧面移重心",
+      "values": {
+        "PositionX": -7,
+        "PositionZ": -4
+      }
+    },
+    {
+      "kind": "pose",
+      "at": 9,
+      "duration": 6,
+      "label": "换重心并收手",
+      "values": {
+        "PositionX": 7,
+        "PositionZ": 4
+      }
+    },
+    {
+      "kind": "smile",
+      "at": 1,
+      "duration": 16,
+      "strength": 0.6
+    }
+  ]
+}

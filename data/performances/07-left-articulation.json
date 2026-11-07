@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "title": "抚胸展开 · 手腕致意",
+  "intent": "抚胸展开 · 手腕致意",
+  "summary": "全身肢体探索：腿部由作者物理联动，手臂关节在原生手势中调整，保留完整进入与退出。",
+  "view": "full",
+  "group": "limbs",
+  "icon": "♡",
+  "caption": "全身 · 另一侧大臂 · 小臂 · 手腕 / 19s",
+  "actions": [
+    {
+      "kind": "gesture",
+      "at": 0,
+      "duration": 18,
+      "name": "hand_on_chest",
+      "accents": [
+        {
+          "at": 2,
+          "duration": 2.8,
+          "values": {
+            "upperArm": -0.3,
+            "perspective": 0.35
+          }
+        },
+        {
+          "at": 5.3,
+          "duration": 2.8,
+          "values": {
+            "forearm": 0.4
+          }
+        },
+        {
+          "at": 8.6,
+          "duration": 2.8,
+          "values": {
+            "wrist": -0.5
+          }
+        },
+        {
+          "at": 11.9,
+          "duration": 2.8,
+          "values": {
+            "wrist": 0.5,
+            "forearm": 0.65
+          }
+        }
+      ]
+    },
+    {
+      "kind": "smile",
+      "at": 1,
+      "duration": 16,
+      "strength": 0.5
+    },
+    {
+      "kind": "nod",
+      "at": 13,
+      "duration": 3,
+      "strength": 0.3
+    }
+  ]
+}

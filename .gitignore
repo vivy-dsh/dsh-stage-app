@@ -1,0 +1,6 @@
+node_modules/
+.DS_Store
+*.log
+
+# Live2D Cubism Core 为专有许可，不随本仓库分发（见 vendor/README.md）
+/vendor/live2dcubismcore.min.js

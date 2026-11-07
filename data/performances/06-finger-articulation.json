@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "title": "竖指讲解 · 手臂腕指变化",
+  "intent": "竖指讲解 · 手臂腕指变化",
+  "summary": "全身肢体探索：腿部由作者物理联动，手臂关节在原生手势中调整，保留完整进入与退出。",
+  "view": "full",
+  "group": "limbs",
+  "icon": "☝",
+  "caption": "全身 · 大臂 · 小臂 · 手腕 · 食指 / 19s",
+  "actions": [
+    {
+      "kind": "gesture",
+      "at": 0,
+      "duration": 18,
+      "name": "point",
+      "accents": [
+        {
+          "at": 2,
+          "duration": 2.8,
+          "values": {
+            "upperArm": -0.3,
+            "perspective": 0.45
+          }
+        },
+        {
+          "at": 5.3,
+          "duration": 2.8,
+          "values": {
+            "forearm": 0.25
+          }
+        },
+        {
+          "at": 8.6,
+          "duration": 2.8,
+          "values": {
+            "wrist": 0.5
+          }
+        },
+        {
+          "at": 11.9,
+          "duration": 2.8,
+          "values": {
+            "finger": 0.65
+          }
+        }
+      ]
+    },
+    {
+      "kind": "smile",
+      "at": 1,
+      "duration": 16,
+      "strength": 0.5
+    },
+    {
+      "kind": "look",
+      "at": 3,
+      "duration": 4,
+      "direction": "left",
+      "strength": 0.3
+    }
+  ]
+}

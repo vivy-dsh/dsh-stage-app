@@ -1,0 +1,14 @@
+{
+  "name": "dsh-stage-app",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "角色舞台：独立的 Live2D 呈现进程（Mirror）。不依赖 DSH，也不嵌在宿主面板里。",
+  "scripts": {
+    "start": "node cli.mjs start",
+    "check": "node cli.mjs check"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

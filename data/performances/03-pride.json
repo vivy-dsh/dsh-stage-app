@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "title": "得意 → 被戳穿 → 害羞地否认",
+  "intent": "得意 → 被戳穿 → 害羞地否认",
+  "summary": "复杂表演测试：多通道组合，保留作者物理，完成后回到自然待机。",
+  "actions": [
+    {
+      "kind": "expression",
+      "at": 0.5,
+      "duration": 6,
+      "name": "屑屑眼",
+      "strength": 1
+    },
+    {
+      "kind": "smile",
+      "at": 0.5,
+      "duration": 6,
+      "strength": 0.85
+    },
+    {
+      "kind": "pose",
+      "at": 0.5,
+      "duration": 6,
+      "label": "得意：扬眉、抬头侧倾",
+      "values": {
+        "ParamBrowLY": 0.4,
+        "ParamBrowRY": -0.15,
+        "AngleY": 8,
+        "AngleZ": -10,
+        "PositionZ": 3
+      }
+    },
+    {
+      "kind": "talk",
+      "at": 2,
+      "duration": 3.5,
+      "strength": 0.65
+    },
+    {
+      "kind": "expression",
+      "at": 8,
+      "duration": 4,
+      "name": "流冷汗",
+      "strength": 1
+    },
+    {
+      "kind": "pose",
+      "at": 8,
+      "duration": 3,
+      "label": "被戳穿：睁大眼、停顿",
+      "values": {
+        "ParamEyeLOpen": 1.3,
+        "ParamEyeROpen": 1.3,
+        "ParamBrowLY": 0.7,
+        "ParamBrowRY": 0.7,
+        "ParamMouthOpenY": 0.25,
+        "AngleY": -3
+      }
+    },
+    {
+      "kind": "look",
+      "at": 8,
+      "duration": 3,
+      "direction": "right",
+      "strength": 0.55
+    },
+    {
+      "kind": "expression",
+      "at": 11.5,
+      "duration": 7,
+      "name": "脸红",
+      "strength": 0.85
+    },
+    {
+      "kind": "shake_head",
+      "at": 11.5,
+      "duration": 4,
+      "count": 3,
+      "strength": 0.5
+    },
+    {
+      "kind": "pose",
+      "at": 11.5,
+      "duration": 4,
+      "label": "害羞否认：鼓脸、皱眉",
+      "values": {
+        "CheeckPuff": 0.7,
+        "ParamMouthForm": -0.3,
+        "BrowInnerUp": 0.35
+      }
+    },
+    {
+      "kind": "gesture",
+      "at": 12,
+      "duration": 6,
+      "name": "hand_on_chest"
+    },
+    {
+      "kind": "look",
+      "at": 15.7,
+      "duration": 2.5,
+      "direction": "down",
+      "strength": 0.45
+    },
+    {
+      "kind": "smile",
+      "at": 16,
+      "duration": 3,
+      "strength": 0.45
+    },
+    {
+      "kind": "tilt",
+      "at": 16,
+      "duration": 3,
+      "direction": "right",
+      "strength": 0.4
+    }
+  ]
+}

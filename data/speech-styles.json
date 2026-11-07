@@ -1,0 +1,9 @@
+{
+  "auto":{"label":"随台词变化","instruction":"","smile":0.15,"tilt":0,"lean":0,"blush":0},
+  "neutral":{"label":"自然讲述","instruction":"用自然、平稳的聊天语气说话，语速适中，句间自然停顿。","smile":0.12,"tilt":0,"lean":0,"blush":0},
+  "happy":{"label":"开心","instruction":"用开心、明亮、带笑意的语气说话，发音清楚，自然停顿。","smile":0.7,"tilt":4,"lean":-3,"blush":0},
+  "gentle":{"label":"温柔","instruction":"用温柔、耐心的日常语气说话，正常音量，语速舒缓。","smile":0.35,"tilt":-4,"lean":-2,"blush":0},
+  "curious":{"label":"好奇","instruction":"用自然、好奇的询问语气说话，语调有变化，发音清楚。","smile":0.15,"tilt":7,"lean":-4,"blush":0},
+  "shy":{"label":"含笑害羞","instruction":"用亲近、带笑意、略微害羞的日常语气说话，正常音量，自然换气。","smile":0.4,"tilt":-5,"lean":1,"blush":0.65},
+  "serious":{"label":"认真","instruction":"用认真、清晰、平静的语气说话，重点处稍作停顿。","smile":0,"tilt":0,"lean":-2,"blush":0}
+}

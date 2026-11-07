@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>舞台</title>
+<style>
+  :root { color-scheme: dark }
+  html, body { margin: 0; height: 100%; background: #16181d; overflow: hidden }
+  #stage { position: relative; width: 100vw; height: 100vh }
+  #c { position: absolute; inset: 0; width: 100%; height: 100%; display: block; cursor: grab; touch-action: none }
+  #c.dragging { cursor: grabbing }
+  /* 状态条平时很淡，只在出问题时说话——它不该抢角色的镜头。 */
+  #status {
+    position: absolute; left: 12px; bottom: 10px;
+    font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+    color: #7f8794; background: rgba(12, 14, 18, .55);
+    padding: 4px 9px; border-radius: 6px; pointer-events: none;
+    transition: opacity .4s; opacity: .55;
+  }
+  #status.warn { color: #f0b46a; opacity: 1 }
+  #status.bad { color: #ef7b7b; opacity: 1 }
+  #hint { position: absolute; inset: 0; display: none; place-content: center; text-align: center; color: #cfd4dc; font: 14px/1.8 system-ui, sans-serif; padding: 2rem }
+</style>
+</head>
+<body>
+  <div id="stage">
+    <canvas id="c"></canvas>
+    <div id="status">启动中…</div>
+    <div id="hint"></div>
+  </div>
+  <script type="module">
+    // 令牌由服务端注入（页面文件里不留秘密）。
+    const TOKEN = '__STAGE_TOKEN__'
+    const statusEl = document.getElementById('status')
+    const hintEl = document.getElementById('hint')
+
+    const setStatus = (text, level = '') => {
+      statusEl.textContent = text
+      statusEl.className = level
+    }
+
+    const api = async (path, body) => {
+      const response = await fetch(path, body === undefined ? {
+        headers: { 'x-stage-token': TOKEN },
+      } : {
+        method: 'POST',
+        headers: { 'content-type': 'application/json', 'x-stage-token': TOKEN },
+        body: JSON.stringify(body),
+      })
+      return response.json().catch(() => null)
+    }
+
+    try {
+      const stage = await import('/stage/stage.mjs')
+      const probe = await stage.probeRuntime()
+      if (!probe.ok) throw new Error(`运行时缺文件：${(probe.missing ?? []).join('、')}`)
+
+      const query = new URLSearchParams(location.search)
+      const canvas = document.getElementById('c')
+
+      // 资源路径问服务端要：目录名和资源名经常不一致，页面不该猜。
+      const target = await api(`/api/model${query.get('model') === null ? '' : `?name=${encodeURIComponent(query.get('model'))}`}`)
+      if (!target?.ok || !target.modelPath) throw new Error(target?.error ?? '服务端没给出模型路径')
+
+      // 带令牌的 fetch：舞台内部要取档案/表情/动作时也走它，否则会被自己的鉴权挡在门外。
+      const stagedFetch = (input, init = {}) => fetch(input, {
+        ...init,
+        headers: { ...init.headers ?? {}, 'x-stage-token': TOKEN },
+      })
+
+      const handle = await stage.mount(canvas, { modelPath: target.modelPath, fetchImpl: stagedFetch })
+
+      // 视图手势（滚轮缩放、拖动、双击复位）归 stage.mjs 管——它本来就在做，
+      // 这里再写一套不但重复，还会互相抢事件。
+
+      // 画布坐标 → 舞台局部坐标。渲染器按 CSS 像素尺寸 resize，
+      // 所以局部坐标与画布内的偏移是 1:1，不需要再按缩放折算。
+      const toLocal = (event) => {
+        const rect = canvas.getBoundingClientRect()
+        return { x: event.clientX - rect.left, y: event.clientY - rect.top }
+      }
+
+      // 点击判断：短、且几乎没动，才是一次「点」。
+      //
+      // 监听挂 window 的捕获阶段，而不是画布上——stage.mjs 拖动时会 setPointerCapture，
+      // 指针捕获会把后续 pointermove 全部改道，绑在画布上的监听就再也收不到移动，
+      // 于是「拖了一大段再松手」会被误判成点击。捕获阶段先于改道目标执行，躲得开。
+      let press = null
+      const interaction = { moves: 0, lastMoved: 0, lastHeld: 0, lastTap: null, rejected: null }
+      const TAP_MOVE_PX = 9
+      const TAP_MAX_MS = 400
+
+      canvas.addEventListener('pointerdown', (event) => {
+        press = { x: event.clientX, y: event.clientY, at: performance.now(), moved: 0 }
+        // 触摸时 pointermove 只在按下期间有，所以按下就先跟一次目光。
+        handle.model.focus(toLocal(event).x, toLocal(event).y)
+      })
+
+      window.addEventListener('pointermove', (event) => {
+        if (press === null) return
+        const moved = Math.hypot(event.clientX - press.x, event.clientY - press.y)
+        if (moved > press.moved) {
+          press.moved = moved
+          interaction.moves += 1
+          interaction.lastMoved = moved
+        }
+      }, { capture: true, passive: true })
+
+      const endTap = (event) => {
+        const wasPress = press
+        press = null
+        if (wasPress === null) return
+        const held = performance.now() - wasPress.at
+        interaction.lastHeld = held
+        if (wasPress.moved >= TAP_MOVE_PX || held > TAP_MAX_MS) {
+          interaction.rejected = wasPress.moved >= TAP_MOVE_PX
+            ? `移动了 ${Math.round(wasPress.moved)}px`
+            : `按了 ${Math.round(held)}ms`
+          return
+        }
+        const point = toLocal(event)
+        const { region } = handle.hitTest(point.x, point.y)
+        if (region === null) return
+        interaction.lastTap = region
+        console.log(`[stage] 点中 ${region}（${Math.round(point.x)},${Math.round(point.y)}）`)
+        handle.react(region, point).then((compiled) => {
+          if (compiled === null) console.log('[stage] 正在演别的，这次点击没抢')
+          else console.log(`[stage] 反应已起手：${compiled.tracks.length} 条轨迹 / ${compiled.duration} 秒`)
+        }).catch((error) => {
+          console.warn('[stage] 反应没演起来：', error?.message ?? error)
+        })
+      }
+      window.addEventListener('pointerup', endTap, { capture: true })
+      window.addEventListener('pointercancel', () => { press = null }, { capture: true })
+
+      // 跟随指令箱：这个页面自己的源、自己的令牌，不经过任何宿主。
+      const follow = { running: false, controller: null, lastError: null }
+
+      async function loop() {
+        if (follow.running) return
+        follow.running = true
+        follow.controller = new AbortController()
+        const { signal } = follow.controller
+        try {
+          while (follow.running && !signal.aborted) {
+            let payload = null
+            try {
+              const vis = document.visibilityState
+              const response = await fetch(`/api/pending?wait=25000&vis=${vis}`, {
+                headers: { 'x-stage-token': TOKEN }, signal,
+              })
+              if (!response.ok) throw new Error(`HTTP ${response.status}`)
+              payload = await response.json()
+            } catch (error) {
+              if (signal.aborted) break
+              follow.lastError = error?.message ?? String(error)
+              setStatus('指令通道断了，正在重试…', 'warn')
+              await sleep(1500, signal)
+              continue
+            }
+            if (signal.aborted) break
+
+            if (payload?.type === 'stop') { handle.stop(); setStatus('待机'); continue }
+            if (payload?.type !== 'perform' || typeof payload.jobId !== 'string') continue
+            await run(payload, signal)
+          }
+        } finally {
+          follow.running = false
+        }
+      }
+
+      const sleep = (ms, signal) => new Promise((done) => {
+        const timer = setTimeout(done, ms)
+        signal?.addEventListener('abort', () => { clearTimeout(timer); done() }, { once: true })
+      })
+
+      async function run(payload, signal) {
+        const { jobId, compiled } = payload
+        const report = async (status, extra = {}) => {
+          try {
+            const response = await fetch('/api/receipt', {
+              method: 'POST',
+              headers: { 'content-type': 'application/json', 'x-stage-token': TOKEN },
+              body: JSON.stringify({ jobId, status, ...extra }),
+              signal,
+            })
+            if (!response.ok) { setStatus(`回执被拒 HTTP ${response.status}`, 'bad'); return null }
+            return await response.json()
+          } catch { return null }
+        }
+        try {
+          if (!compiled || !Array.isArray(compiled.tracks) || compiled.tracks.length === 0) {
+            await report('failed', { error: '任务里没有可执行的轨迹' })
+            return
+          }
+          await handle.play(compiled)
+          await report('started', { progress: 0 })
+          setStatus('演出中…')
+          // 进度从引擎自己的时钟读：那是真的在演的时间，不是墙钟猜的。
+          while (!signal.aborted && handle.performing) {
+            await sleep(1000, signal)
+            if (signal.aborted || !handle.performing) break
+            const job = handle.performance
+            const progress = job === null ? 0 : Math.min(0.99, (job.elapsed ?? 0) / Math.max(0.2, job.duration ?? compiled.duration))
+            const answer = await report('progress', { progress })
+            if (answer?.stopRequested === true) {
+              handle.stop()
+              await report('completed', { progress })
+              setStatus('被打断，回到待机')
+              return
+            }
+          }
+          await report('completed', { progress: 1 })
+          setStatus('待机')
+        } catch (error) {
+          await report('failed', { error: error?.message ?? String(error) })
+          setStatus(`演失败了：${error?.message ?? error}`, 'bad')
+        }
+      }
+
+      // 诊断：验证与排障用。只读快照，不影响任何行为。
+      window.__stageDebug = () => {
+        const bounds = handle.model.getBounds()
+        return {
+          bounds: { x: bounds.x, y: bounds.y, width: bounds.width, height: bounds.height },
+          performing: handle.performing,
+          view: handle.getView(),
+          engine: handle.debug(),
+          interaction: { ...interaction },
+        }
+      }
+
+      setStatus('待机')
+      loop().catch((error) => setStatus(`指令通道停了：${error?.message ?? error}`, 'bad'))
+
+      // 看门狗：不依赖任何事件，每 5 秒确认通道还在。
+      setInterval(() => {
+        if (follow.running) return
+        setStatus('通道已停，重新拉起…', 'warn')
+        loop().catch((error) => setStatus(`重连失败：${error?.message ?? error}`, 'bad'))
+      }, 5000)
+
+      document.addEventListener('visibilitychange', () => {
+        if (document.visibilityState !== 'visible' || follow.running) return
+        loop().catch(() => {})
+      })
+    } catch (error) {
+      statusEl.style.display = 'none'
+      hintEl.style.display = 'grid'
+      hintEl.textContent = `舞台起不来：${error?.message ?? error}`
+      console.error('[stage] 启动失败', error)
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+{
+  "title": "长裙逗趣 → Q版闹别扭 → 恢复致意",
+  "group": "fullbody-emotion",
+  "icon": "❧",
+  "caption": "长裙 · Q版 · 持草抚胸 · 36 秒",
+  "actions": [
+    {
+      "kind": "expression",
+      "name": "裙子切换",
+      "at": 0,
+      "duration": 10,
+      "strength": 1
+    },
+    {
+      "kind": "expression",
+      "name": "黑框眼镜",
+      "at": 0,
+      "duration": 10,
+      "strength": 1
+    },
+    {
+      "kind": "gesture",
+      "name": "grass",
+      "at": 0.3,
+      "duration": 10,
+      "accents": [
+        {
+          "at": 2,
+          "duration": 2,
+          "values": {
+            "wrist": -0.7,
+            "upperArm": -0.4,
+            "forearm": -0.5
+          }
+        },
+        {
+          "at": 5,
+          "duration": 2,
+          "values": {
+            "wrist": 0.7,
+            "perspective": 0.65
+          }
+        }
+      ]
+    },
+    {
+      "kind": "trajectory",
+      "at": 0.2,
+      "duration": 10,
+      "label": "长裙随重心左右摆动",
+      "frames": [
+        {
+          "time": 1,
+          "values": {
+            "AngleX": 24,
+            "AngleY": 12,
+            "AngleZ": 20,
+            "PositionX": 20,
+            "PositionY": 10,
+            "PositionZ": 18
+          }
+        },
+        {
+          "time": 3,
+          "values": {
+            "AngleX": 24,
+            "AngleY": 12,
+            "AngleZ": 20,
+            "PositionX": 20,
+            "PositionY": 10,
+            "PositionZ": 18
+          }
+        },
+        {
+          "time": 5,
+          "values": {
+            "AngleX": -24,
+            "AngleY": -15,
+            "AngleZ": -20,
+            "PositionX": -20,
+            "PositionY": -12,
+            "PositionZ": -18
+          }
+        },
+        {
+          "time": 7,
+          "values": {
+            "AngleX": -24,
+            "AngleY": -15,
+            "AngleZ": -20,
+            "PositionX": -20,
+            "PositionY": -12,
+            "PositionZ": -18
+          }
+        },
+        {
+          "time": 9,
+          "values": {
+            "AngleX": 0,
+            "AngleY": 0,
+            "AngleZ": 0,
+            "PositionX": 0,
+            "PositionY": 0,
+            "PositionZ": 0
+          }
+        }
+      ]
+    },
+    {
+      "kind": "pose",
+      "at": 1,
+      "duration": 8,
+      "label": "眯眼逗趣",
+      "values": {
+        "ParamMouthForm": 0.85,
+        "LEyeSquint": 0.6,
+        "MouthX": -0.5
+      }
+    },
+    {
+      "kind": "expression",
+      "name": "体型2",
+      "at": 11,
+      "duration": 10,
+      "strength": 1
+    },
+    {
+      "kind": "expression",
+      "name": "脸红",
+      "at": 11,
+      "duration": 10,
+      "strength": 1
+    },
+    {
+      "kind": "trajectory",
+      "at": 11,
+      "duration": 10,
+      "label": "Q版：偏头鼓脸，再转向你",
+      "frames": [
+        {
+          "time": 1,
+          "values": {
+            "AngleX": -25,
+            "AngleY": -15,
+            "AngleZ": -20,
+            "PositionX": -20,
+            "PositionY": -10,
+            "PositionZ": -18,
+            "LeanInput": -10
+          }
+        },
+        {
+          "time": 3,
+          "values": {
+            "AngleX": -25,
+            "AngleY": -15,
+            "AngleZ": -20,
+            "PositionX": -20,
+            "PositionY": -10,
+            "PositionZ": -18,
+            "LeanInput": -10
+          }
+        },
+        {
+          "time": 5,
+          "values": {
+            "AngleX": 25,
+            "AngleY": 18,
+            "AngleZ": 22,
+            "PositionX": 20,
+            "PositionY": 15,
+            "PositionZ": 18,
+            "LeanInput": 5
+          }
+        },
+        {
+          "time": 7,
+          "values": {
+            "AngleX": 25,
+            "AngleY": 18,
+            "AngleZ": 22,
+            "PositionX": 20,
+            "PositionY": 15,
+            "PositionZ": 18,
+            "LeanInput": 5
+          }
+        },
+        {
+          "time": 9,
+          "values": {
+            "AngleX": 0,
+            "AngleY": 0,
+            "AngleZ": 0,
+            "PositionX": 0,
+            "PositionY": 0,
+            "PositionZ": 0,
+            "LeanInput": 0
+          }
+        }
+      ]
+    },
+    {
+      "kind": "pose",
+      "at": 11.5,
+      "duration": 4,
+      "label": "鼓脸闹别扭",
+      "values": {
+        "CheeckPuff": 1,
+        "Mouthpucker": 1,
+        "ParamBrowLY": -0.5,
+        "ParamBrowRY": -0.5
+      }
+    },
+    {
+      "kind": "pose",
+      "at": 16,
+      "duration": 4,
+      "label": "吐舌回望",
+      "values": {
+        "TongueOut": 1,
+        "ParamMouthOpenY": 0.75,
+        "ParamMouthForm": 0.85,
+        "REyeSquint": 0.6
+      }
+    },
+    {
+      "kind": "gesture",
+      "name": "hand_on_chest",
+      "at": 22,
+      "duration": 12,
+      "accents": [
+        {
+          "at": 2,
+          "duration": 3,
+          "values": {
+            "upperArm": -0.45,
+            "wrist": -0.6,
+            "forearm": 0.55
+          }
+        },
+        {
+          "at": 6,
+          "duration": 3,
+          "values": {
+            "wrist": 0.6,
+            "perspective": 0.7
+          }
+        }
+      ]
+    },
+    {
+      "kind": "trajectory",
+      "at": 22,
+      "duration": 13,
+      "label": "恢复身形，前倾致意",
+      "frames": [
+        {
+          "time": 1,
+          "values": {
+            "AngleX": 16,
+            "AngleY": 12,
+            "AngleZ": 14,
+            "PositionX": 14,
+            "PositionY": 10,
+            "PositionZ": 12,
+            "LeanInput": 0
+          }
+        },
+        {
+          "time": 4,
+          "values": {
+            "AngleX": 0,
+            "AngleY": -24,
+            "AngleZ": 0,
+            "PositionX": 0,
+            "PositionY": -20,
+            "PositionZ": 0,
+            "LeanInput": -26
+          }
+        },
+        {
+          "time": 6,
+          "values": {
+            "AngleX": 0,
+            "AngleY": -24,
+            "AngleZ": 0,
+            "PositionX": 0,
+            "PositionY": -20,
+            "PositionZ": 0,
+            "LeanInput": -26
+          }
+        },
+        {
+          "time": 9,
+          "values": {
+            "AngleX": -18,
+            "AngleY": 12,
+            "AngleZ": -16,
+            "PositionX": -14,
+            "PositionY": 8,
+            "PositionZ": -12,
+            "LeanInput": 0
+          }
+        },
+        {
+          "time": 11,
+          "values": {
+            "AngleX": 0,
+            "AngleY": 0,
+            "AngleZ": 0,
+            "PositionX": 0,
+            "PositionY": 0,
+            "PositionZ": 0,
+            "LeanInput": 0
+          }
+        }
+      ]
+    },
+    {
+      "kind": "pose",
+      "at": 23,
+      "duration": 11,
+      "label": "微笑致意",
+      "values": {
+        "ParamMouthForm": 1,
+        "EyeSmile": 0.9,
+        "MouthSmile_L": 0.8,
+        "MouthSmile_R": 0.8
+      }
+    }
+  ],
+  "version": 1,
+  "intent": "长裙逗趣 → Q版闹别扭 → 恢复致意",
+  "summary": "扩大作者输入幅度，以连续多轴轨迹探索形变；保留原生物理及手势进入退出。",
+  "view": "full"
+}
